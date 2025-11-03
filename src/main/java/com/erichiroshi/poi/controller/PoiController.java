@@ -8,10 +8,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.erichiroshi.poi.entity.dto.PointDTO;
+import com.erichiroshi.poi.entity.dto.PointNomeDTO;
 import com.erichiroshi.poi.service.PoiService;
 
 @RestController
@@ -27,6 +29,14 @@ public class PoiController {
     @GetMapping
     public ResponseEntity<List<PointDTO>> findall() {
         List<PointDTO> listDto = poiService.findAll();
+        return ResponseEntity.ok(listDto);
+    }
+    
+    @GetMapping("/near")
+    public ResponseEntity<List<PointNomeDTO>> listarProximos(@RequestParam(defaultValue = "0") Long x,
+                                                            @RequestParam(defaultValue = "0") Long y,
+                                                            @RequestParam(defaultValue = "0") Long dMax) {
+        List<PointNomeDTO> listDto = poiService.listarProximos(x, y, dMax);
         return ResponseEntity.ok(listDto);
     }
 
