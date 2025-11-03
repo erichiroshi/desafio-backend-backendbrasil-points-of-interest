@@ -22,4 +22,9 @@ public class PoiService {
         return list.stream().map(PointDTO::toPointDTO).toList();
     }
 
+    public PointDTO insert(PointDTO dto) {
+        Point pointSave = poiRepository.save(dto.toPoint());
+        return PointDTO.toPointDTO(pointSave);
+    }
+
 }
