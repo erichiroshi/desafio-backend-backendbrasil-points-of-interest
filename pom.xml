@@ -13,7 +13,7 @@
 	<groupId>com.erichiroshi</groupId>
 	<artifactId>poi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>poi</name>
+	<name>points of interest</name>
 	<description>Desafio backend points of interest</description>
 	
 	<url/>
