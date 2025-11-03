@@ -9,4 +9,8 @@ public record PointNomeDTO(
         return new PointNomeDTO(point.getNome());
     }
 
+    public static PointNomeDTO toPointNomeDTO(PointDTO pointDTO) {
+        return new PointNomeDTO(pointDTO.nome());
+    }
+
 }

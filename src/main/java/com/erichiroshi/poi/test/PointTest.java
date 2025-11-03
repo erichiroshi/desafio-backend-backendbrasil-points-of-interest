@@ -8,6 +8,7 @@ import com.erichiroshi.poi.service.PoiService;
 
 import lombok.extern.slf4j.Slf4j;
 
+//@Profile("test")
 @Slf4j
 @Component
 public class PointTest implements CommandLineRunner {
@@ -24,5 +25,8 @@ public class PointTest implements CommandLineRunner {
 
         log.info("Ponto de interesse salvo {}",
                 pointService.insert(new PointDTO("Lan House", 10L, 10L)).toString());
+
+        log.info("Pontos de interesses próximos\n{}", pointService.listarProximos(20l, 10l, 10l));
+
     }
 }
