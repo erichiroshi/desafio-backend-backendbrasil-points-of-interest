@@ -29,6 +29,7 @@ O sistema permite **cadastrar, listar e buscar pontos de interesse** próximos a
   - [✅ Pré-requisitos](#-pré-requisitos)
   - [📥 Clonar o repositório](#-clonar-o-repositório)
   - [▶️ Rodar a aplicação](#️-rodar-a-aplicação)
+  - [💾 Banco de Dados](#-banco-de-dados)
   - [🧩 Acessar a documentação Swagger](#-acessar-a-documentação-swagger)
 - [💬 Interagindo com a API](#-interagindo-com-a-api)
 - [📬 Endpoints e Exemplos](#-endpoints-e-exemplos)
@@ -99,7 +100,14 @@ cd desafio-backend-backendbrasil-points-of-interest
 A aplicação estará disponível em:  
 👉 [http://localhost:8080](http://localhost:8080)
 
+### 💾 Banco de Dados
+
+Por padrão, a aplicação utiliza o **h2-Database**.  
+Para acessar o console:  👉 [http://localhost:8080/h2-console](http://localhost:8080/h2-console)
+- Utilizar credências conforme configurado no application.properties.
+
 ### 🧩 Acessar a documentação Swagger
+
 👉 [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
 
 ---
