@@ -24,7 +24,7 @@ public class PointTest implements CommandLineRunner {
         log.info("Pontos de interesses: {}", pointService.findAll());
 
         log.info("Ponto de interesse salvo {}",
-                pointService.insert(new PointDTO("Lan House", 10L, 10L)).toString());
+                pointService.insert(new PointDTO(null, "Lan House", 10L, 10L)).toString());
 
         log.info("Pontos de interesses próximos\n{}", pointService.listarProximos(20l, 10l, 10l));
 
